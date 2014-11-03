@@ -1,40 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   runner.c                                           :+:      :+:    :+:   */
+/*   test_macros.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dda-silv <dda-silv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/03 17:57:32 by dda-silv          #+#    #+#             */
-/*   Updated: 2014/11/03 22:01:09 by dda-silv         ###   ########.fr       */
+/*   Created: 2014/11/03 20:46:34 by dda-silv          #+#    #+#             */
+/*   Updated: 2014/11/03 21:26:53 by dda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "libft.h"
 #include "test_macros.h"
-#include "tests.h"
 
-int	tests_run = 0;
-int tests_failed = 0;
-
-int	all_tests()
+int		_pending_test = 0;
+char	*_last_it;
+void	_close_pending()
 {
-	_verify(test_ft_memcpy);
-	return (0);
+	if (_pending_test)
+		printf("\t\x1B[1A\x1B[32m%s ✔\x1B[0m\n", _last_it);
+	_pending_test = 0;
 }
 
-int	main(int argc, char **argv)
+void	_it(char *should)
 {
-	int result;
-
-	printf("\n");
-	result = all_tests();
-	
-	if (result == 0) printf("All good! :D\n");
-	else printf("(/>.<)/|__|\n");
-	
-	printf("Tests passed: %d/%d\n\n", tests_run - tests_failed, tests_run);
-	return (result != 0);
+	_close_pending();
+	printf("\t\x1B[31m%s ✗\x1B[0m\n", should);
+	_pending_test = 1;
+	_last_it = should;
 }
-
