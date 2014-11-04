@@ -6,7 +6,7 @@
 /*   By: dda-silv <dda-silv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 18:05:33 by dda-silv          #+#    #+#             */
-/*   Updated: 2014/11/04 15:56:11 by dda-silv         ###   ########.fr       */
+/*   Updated: 2014/11/04 16:37:12 by dda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,38 @@ int	test_ft_memcpy()
 	_it("should not crash with both dest and src null");
 	ft_memcpy(NULL, NULL, 2);
 		
+	_it("should do nothing with len = 0");
+	dst1 = malloc(1);
+	memset(dst1, 0, 1);
+	ft_memcpy(dst1, "a", 0);
+	_assert(!((char *)dst1)[0]);
+	
 	_it("should correctly copy a string from src to dest");
 	src = "je sais pas std";
-	dst1 = (char*) malloc(strlen(src) + 1); 
+	dst1 = malloc(strlen(src) + 1); 
 	ft_memcpy(dst1, src, strlen(src)+1);
 	_assert(((char *)dst1)[strlen(src)] == 0);
 	_assert_str(src, dst1);
+
+	_it("should return dst");
+	dst1 = malloc(1);
+	_assert_ptr(ft_memcpy(NULL, src, 1), NULL);
+	_assert_ptr(ft_memcpy(dst1, src, 1), dst1);
+
+	_done;
+}
+
+int test_ft_memccpy()
+{
+	char	*src = "w0l0l0";
+	char	*dst[10];
+
+	_begin;
+
+	_it("should not crash with null dest or src");
+	ft_memccpy(NULL, src, '0', 1);
+	ft_memccpy(dst, NULL, '0', 2);
+	ft_memccpy(NULL, NULL, '0', 3);
 
 	_done;
 }
@@ -77,6 +103,7 @@ int	test_ft_memset()
 int	test_ft_bzero()
 {
 	char	dst[5];
+	
 	_begin;
 
 	_it("should not crash with null dest");
@@ -100,3 +127,4 @@ int	test_ft_bzero()
 
 	_done;
 }
+
