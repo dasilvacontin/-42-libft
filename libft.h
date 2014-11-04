@@ -6,7 +6,7 @@
 /*   By: dda-silv <dda-silv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 16:58:48 by dda-silv          #+#    #+#             */
-/*   Updated: 2014/11/03 18:19:56 by dda-silv         ###   ########.fr       */
+/*   Updated: 2014/11/04 15:50:42 by dda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,7 @@ void					ft_lstadd(t_list **alst, t_list *new);
 void					ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 
 void					*ft_memcpy(void *dst, const void *src, size_t n);
+void					*ft_memset(void *b, int c, size_t len);
+void					ft_bzero(void *s, size_t n);
 
 #endif
