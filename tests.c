@@ -6,7 +6,7 @@
 /*   By: dda-silv <dda-silv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 18:05:33 by dda-silv          #+#    #+#             */
-/*   Updated: 2014/11/04 16:37:12 by dda-silv         ###   ########.fr       */
+/*   Updated: 2014/11/04 17:50:02 by dda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,9 @@ int	test_ft_memcpy()
 int test_ft_memccpy()
 {
 	char	*src = "w0l0l0";
-	char	*dst[10];
+	char	dst[10];
+	char	dst2[10];
+	void	*ret;
 
 	_begin;
 
@@ -67,6 +69,20 @@ int test_ft_memccpy()
 	ft_memccpy(dst, NULL, '0', 2);
 	ft_memccpy(NULL, NULL, '0', 3);
 
+	_it("should copy 'n' bytes from src to dst and return NULL");
+	bzero(dst, 10);
+	ret = ft_memccpy(dst, src, '1', strlen((const char *) src));
+	_assert_str(dst, src);
+	_assert_ptr(ret, memccpy(dst, src, '1', strlen((const char*) src)));
+	
+	_it("should copy until it finds 'c' and return a pointer to the byte after the copy of c in the string dst");
+	bzero(dst, 10);
+	bzero(dst2, 10);
+	ft_memccpy(dst, src, 'l', 5);
+	memccpy(dst2, src, 'l', 5);
+	_assert_str(dst, dst2);	
+	_assert_ptr(ft_memccpy(dst, src, 'l', 5), memccpy(dst, src, 'l', 5));
+	
 	_done;
 }
 
