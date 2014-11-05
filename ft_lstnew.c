@@ -6,7 +6,7 @@
 /*   By: dda-silv <dda-silv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 17:14:55 by dda-silv          #+#    #+#             */
-/*   Updated: 2014/11/03 17:25:30 by dda-silv         ###   ########.fr       */
+/*   Updated: 2014/11/05 17:52:38 by dda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ t_list*		ft_lstnew(void const *content, size_t content_size)
 
 	list = (t_list*) malloc(sizeof(t_list));
 	if (list) {
-		list.content = content;
-		list.content_size = content_size;
+		list->content = (void *) content;
+		list->content_size = content_size;
 	}
+	return (list);
 }
