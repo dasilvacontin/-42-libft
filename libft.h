@@ -6,7 +6,7 @@
 /*   By: dda-silv <dda-silv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 16:58:48 by dda-silv          #+#    #+#             */
-/*   Updated: 2014/11/06 15:11:25 by dda-silv         ###   ########.fr       */
+/*   Updated: 2014/11/06 15:18:43 by dda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,6 @@ void					*ft_memccpy(void *dst, void *src, int c, size_t n);
 void					*ft_memset(void *b, int c, size_t len);
 void					ft_bzero(void *s, size_t n);
 void					*ft_memchr(const void *s, int c, size_t n);
+int						ft_memcmp(const void *s1, const void *s2, size_t n);
 
 #endif
