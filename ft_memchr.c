@@ -1,23 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dda-silv <dda-silv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/03 15:55:30 by dda-silv          #+#    #+#             */
-/*   Updated: 2014/11/06 14:39:43 by dda-silv         ###   ########.fr       */
+/*   Created: 2014/11/06 14:40:18 by dda-silv          #+#    #+#             */
+/*   Updated: 2014/11/06 14:42:59 by dda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char *it;
-
-	if (!str)
-		return (0);
-	it = str;
-	while (*it)
-		++it;
-	return (it - str);
+	while (n--)
+		if (*(byte *)s++
 }

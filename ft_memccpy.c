@@ -6,7 +6,7 @@
 /*   By: dda-silv <dda-silv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 15:58:20 by dda-silv          #+#    #+#             */
-/*   Updated: 2014/11/05 17:07:25 by dda-silv         ###   ########.fr       */
+/*   Updated: 2014/11/06 14:36:00 by dda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memccpy(void *dst, void *src, int c, size_t n)
 	while (n--)
 	{
 		*(byte *)dst++ = *(byte *)src;
-		if (*(byte *)src++ == (byte) c)
+		if (*(byte *)src++ == (byte)c)
 			return (dst);
 	}
 	return (NULL);
