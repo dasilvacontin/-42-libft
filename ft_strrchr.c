@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dda-silv <dda-silv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/07 13:22:17 by dda-silv          #+#    #+#             */
-/*   Updated: 2014/11/07 16:21:40 by dda-silv         ###   ########.fr       */
+/*   Created: 2014/11/07 16:13:26 by dda-silv          #+#    #+#             */
+/*   Updated: 2014/11/07 16:20:32 by dda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
+	char	*last;
+
 	while (1)
 	{
 		if (*s == c)
-			return ((char *)s);
-		else if (*s++ == '\0')
-			return (NULL);
+			last = (char *)s;
+		if (*s++ == '\0')
+			return (last);
 	}
 }
