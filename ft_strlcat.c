@@ -6,7 +6,7 @@
 /*   By: dda-silv <dda-silv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/07 13:04:51 by dda-silv          #+#    #+#             */
-/*   Updated: 2014/11/07 13:20:25 by dda-silv         ###   ########.fr       */
+/*   Updated: 2014/11/07 15:26:48 by dda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,13 @@
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	*sleft;
-	if (!dst)
-		return (0);
+	
 	sleft = size;
-	while (sleft > 1 && sleft-- && *dst)
+	while (*dst && sleft > 0 && sleft--)
 		dst++;
-	if (src)
-		while (sleft > 1 && sleft-- && *src)
-			*dst++ = *src++;
-	*dst = '\0';
+	while (*src && sleft > 1 && sleft--)
+		*dst++ = *src++;
+	if (sleft == 1)
+		*dst = '\0';
 	return (size - sleft);
 }
