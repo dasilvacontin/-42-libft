@@ -6,7 +6,7 @@
 /*   By: dda-silv <dda-silv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 16:58:48 by dda-silv          #+#    #+#             */
-/*   Updated: 2014/11/06 15:18:43 by dda-silv         ###   ########.fr       */
+/*   Updated: 2014/11/07 17:28:14 by dda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ typedef struct			s_list
 }						t_list;
 
 int						ft_strlen(char *str);
+char					*ft_strcpy(char *dst, const char *src);
+int						ft_atoi(const char *str);
 
 t_list					*ft_lstnew(void const *content, size_t content_size);
 void					ft_lstadd(t_list **alst, t_list *new);

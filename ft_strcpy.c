@@ -6,7 +6,7 @@
 /*   By: dda-silv <dda-silv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/07 12:19:36 by dda-silv          #+#    #+#             */
-/*   Updated: 2014/11/07 15:00:50 by dda-silv         ###   ########.fr       */
+/*   Updated: 2014/11/07 17:15:56 by dda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@ char	*ft_strcpy(char *dst, char *src)
 {
 	char	*ret;
 
+	ret = src;
 	while (*src)
 		*dst++ = *src++;
 	*dst = *src;

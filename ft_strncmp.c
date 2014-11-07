@@ -6,9 +6,11 @@
 /*   By: dda-silv <dda-silv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/07 16:52:26 by dda-silv          #+#    #+#             */
-/*   Updated: 2014/11/07 17:00:27 by dda-silv         ###   ########.fr       */
+/*   Updated: 2014/11/07 17:17:45 by dda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	strncmp(const char *s1, const char *s2, size_t n)
 {

@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dda-silv <dda-silv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/04 18:00:25 by dda-silv          #+#    #+#             */
-/*   Updated: 2014/11/07 17:23:00 by dda-silv         ###   ########.fr       */
+/*   Created: 2014/11/07 17:01:32 by dda-silv          #+#    #+#             */
+/*   Updated: 2014/11/07 17:29:30 by dda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+int	ft_atoi(const char *str)
 {
-	void		*ret;
+	int	total;
+	int	sign;
 
-	ret = dst;
-	if (dst < src)
-		while ((size_t)(dst - ret) < len)
-			*(byte *)dst++ = *(byte *)src++;
-	else
-		while (len-- > 0)
-			((byte *)dst)[len] = ((byte *)src)[len];
-	return (ret);
+	sign = 1;
+	total = ft_strlen((char *)str);
+	return (total * sign);
 }
