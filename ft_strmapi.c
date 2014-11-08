@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dda-silv <dda-silv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/07 16:47:20 by dda-silv          #+#    #+#             */
-/*   Updated: 2014/11/08 12:51:49 by dda-silv         ###   ########.fr       */
+/*   Created: 2014/11/08 17:35:36 by dda-silv          #+#    #+#             */
+/*   Updated: 2014/11/08 17:37:07 by dda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	strcmp(const char *s1, const char *s2)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	while (*s1 && *s2 && *s1 == *s2)
+	char			*new;
+	unsigned int	i;
+
+	new = ft_stralloc(s);
+	if (new)
 	{
-		s1++;
-		s2++;
+		i = -1;
+		while (s[++i])
+			new[i] = f(i, s[i]);
+		new[i] = '\0';
 	}
-	return (*(t_byte *)s1 - *(t_byte *)s2);
+	return (new);
 }

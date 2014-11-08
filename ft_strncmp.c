@@ -19,5 +19,5 @@ int	strncmp(const char *s1, const char *s2, size_t n)
 		s1++;
 		s2++;
 	}
-	return (*(byte *)s1 - *(byte *)s2);
+	return (*(t_byte *)s1 - *(t_byte *)s2);
 }

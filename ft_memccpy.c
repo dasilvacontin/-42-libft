@@ -16,8 +16,8 @@ void	*ft_memccpy(void *dst, void *src, int c, size_t n)
 {
 	while (n--)
 	{
-		*(byte *)dst++ = *(byte *)src;
-		if (*(byte *)src++ == (byte)c)
+		*(t_byte *)dst++ = *(t_byte *)src;
+		if (*(t_byte *)src++ == (t_byte)c)
 			return (dst);
 	}
 	return (NULL);

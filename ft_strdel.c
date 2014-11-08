@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dda-silv <dda-silv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/07 16:47:20 by dda-silv          #+#    #+#             */
-/*   Updated: 2014/11/08 12:51:49 by dda-silv         ###   ########.fr       */
+/*   Created: 2014/11/08 16:13:34 by dda-silv          #+#    #+#             */
+/*   Updated: 2014/11/08 16:14:11 by dda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	strcmp(const char *s1, const char *s2)
+void	ft_strdel(char **as)
 {
-	while (*s1 && *s2 && *s1 == *s2)
-	{
-		s1++;
-		s2++;
-	}
-	return (*(t_byte *)s1 - *(t_byte *)s2);
+	ft_memdel((void **)as);
 }

@@ -18,6 +18,6 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	ret = dst;
 	while (n--)
-		*(byte *)dst++ = *(byte *)src++;
+		*(t_byte *)dst++ = *(t_byte *)src++;
 	return (ret);
 }
