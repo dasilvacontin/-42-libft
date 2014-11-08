@@ -6,13 +6,13 @@
 /*   By: dda-silv <dda-silv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/07 12:54:27 by dda-silv          #+#    #+#             */
-/*   Updated: 2014/11/07 15:34:50 by dda-silv         ###   ########.fr       */
+/*   Updated: 2014/11/08 12:16:18 by dda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *s1, char *s2)
+char	*ft_strcat(char *s1, const char *s2)
 {
 	char	*ret;
 

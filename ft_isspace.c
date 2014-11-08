@@ -1,24 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dda-silv <dda-silv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/07 12:32:56 by dda-silv          #+#    #+#             */
-/*   Updated: 2014/11/08 12:18:12 by dda-silv         ###   ########.fr       */
+/*   Created: 2014/11/08 12:29:22 by dda-silv          #+#    #+#             */
+/*   Updated: 2014/11/08 12:33:20 by dda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strncpy(char *dst, const char *src, size_t n)
+int	ft_isspace(int c)
 {
-	char	*ret;
-
-	ret = (char *)src;
-	while (n-- && *src)
-		*dst++ = *src++;
-	ft_bzero(dst, n);
-	return (ret);
+	return (c == '\t' || c == '\n' || c == '\v' ||
+	c == '\f' || c == '\r' || c == ' ');
 }
