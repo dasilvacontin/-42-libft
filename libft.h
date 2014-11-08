@@ -6,7 +6,7 @@
 /*   By: dda-silv <dda-silv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 16:58:48 by dda-silv          #+#    #+#             */
-/*   Updated: 2014/11/08 18:51:55 by dda-silv         ###   ########.fr       */
+/*   Updated: 2014/11/08 20:26:21 by dda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ void	ft_memdel(void **ap);
 void	ft_putchar(char c);
 void	ft_putstr(char *str);
 char	*ft_stralloc(const char *s);
+char	*ft_stpcpy(char *dst, const char *src);
 
 int		ft_strlen(char *str);
 char	*ft_strdup(const char *s1);
@@ -56,6 +57,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int		ft_strequ(char const *s1, char const *s2);
 int		ft_strequ(char const *s1, char const *s2);
 int		ft_strnequ(char const *s1, char const *s2, size_t n);
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s);
 
 int		ft_isspace(int c);
 int		ft_isalpha(int c);
