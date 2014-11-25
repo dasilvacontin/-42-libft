@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+#include <stdlib.h>
+
 char	**ft_strsplit(char const *s, char c)
 {
 	char			**tab;

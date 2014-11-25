@@ -27,13 +27,14 @@ int				ft_memcmp(const void *s1, const void *s2, size_t n);
 void			*ft_memalloc(size_t size);
 void			ft_memdel(void **ap);
 
-void			ft_putchar(char c);
-void			ft_putstr(char *str);
 char			*ft_stralloc(const char *s);
 char			*ft_strallocc(const char *s, char c);
 char			*ft_stpcpy(char *dst, const char *src);
+char			*ft_stpcpyc(char *dst, const char *src, char c);
 unsigned int	ft_strcount(const char *s, char c);
-char			*ft_strdupc(const char *s, char c);
+char			*ft_strqdupc(const char **s1, char c);
+size_t			ft_strlenc(const char *s, char c);
+void			ft_strfill(char **tab, const char *s, char c);
 
 int				ft_strlen(char *str);
 char			*ft_strdup(const char *s1);
@@ -64,6 +65,15 @@ char			*ft_strsub(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s);
 char			**ft_strsplit(char const *s, char c);
+char			*ft_itoa(int n);
+void			ft_putchar(char c);
+void			ft_putstr(char const *str);
+void			ft_putendl(char const *str);
+void			ft_putnbr(int n);
+void			ft_putchar_fd(char c, int fd);
+void			ft_putstr_fd(char const *s, int fd);
+void			ft_putendl_fd(char const *s, int fd);
+void			ft_putnbr_fd(int n, int fd);
 
 int				ft_isspace(int c);
 int				ft_isalpha(int c);

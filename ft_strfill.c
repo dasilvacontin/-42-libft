@@ -10,12 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	ft_strfill(char **tab, const char *s, char c)
 {
 	while (*s)
 	{
 		if (*s != c)
-			*tab++ = ft_strqdup(&s, c);
+			*tab++ = ft_strqdupc(&s, c);
 		s++;
 	}
 	*tab = NULL;

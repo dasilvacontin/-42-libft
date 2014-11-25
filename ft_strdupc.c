@@ -10,12 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char			*ft_strdupc(const char *s, char c)
 {
 	char	*str;
 
 	str = ft_strallocc(s, c);
 	if (str)
-		ft_strcpyc(str, s1);
+		ft_stpcpyc(str, s, c);
 	return (str);
 }
