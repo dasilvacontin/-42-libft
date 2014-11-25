@@ -62,8 +62,8 @@
 ## bonus
 
 [x] lstnew
-[ ] lstdelone
-[ ] lstdel
-[ ] lstadd
-[ ] lstiter
-[ ] lstmap
+[x] lstdelone
+[x] lstdel
+[x] lstadd
+[x] lstiter
+[x] lstmap
