@@ -6,7 +6,7 @@
 /*   By: dda-silv <dda-silv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/07 16:32:55 by dda-silv          #+#    #+#             */
-/*   Updated: 2014/11/07 17:22:23 by dda-silv         ###   ########.fr       */
+/*   Updated: 2014/11/26 15:56:49 by dda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
+	size_t	itn;
 	char	*it1;
 	char	*it2;
 
@@ -23,9 +24,10 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 	{
 		if (*s1 == *s2)
 		{
+			itn = n;
 			it1 = (void *)s1 + 1;
 			it2 = (void *)s2 + 1;
-			while (*it1 && *it2 && *it1 == *it2)
+			while (itn-- && *it1 && *it2 && *it1 == *it2)
 			{
 				++it1;
 				++it2;

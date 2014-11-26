@@ -6,7 +6,7 @@
 #    By: dda-silv <dda-silv@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/26 14:27:20 by dda-silv          #+#    #+#              #
-#    Updated: 2014/11/26 15:03:52 by dda-silv         ###   ########.fr        #
+#    Updated: 2014/11/26 15:06:57 by dda-silv         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,9 @@ OBJ = ft_memset.o ft_bzero.o ft_memcpy.o ft_memmove.o ft_memchr.o \
 	ft_strnequ.o ft_strsub.o ft_strjoin.o ft_strtrim.o ft_strsplit.o \
 	ft_itoa.o ft_putchar.o ft_putstr.o ft_putendl.o ft_putnbr.o \
 	ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o \
-	ft_lstnew.o ft_lstdelone.o ft_lstdel.o ft_lstadd.o ft_lstiter.o ft_lstmap.o
+	ft_lstnew.o ft_lstdelone.o ft_lstdel.o ft_lstadd.o ft_lstiter.o \
+	ft_lstmap.o ft_islower.o ft_isspace.o ft_isupper.o ft_memccpy.o \
+	ft_stpcpy.o ft_stralloc.o
 
 all: $(NAME)
 
