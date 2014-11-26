@@ -15,10 +15,13 @@
 char	*ft_strncpy(char *dst, const char *src, size_t n)
 {
 	char	*ret;
+	size_t	start;
 
-	ret = (char *)src;
-	while (n-- && *src)
+	ret = (char *)dst;
+	start = n;
+	while (*src && n--)
 		*dst++ = *src++;
-	ft_bzero(dst, n);
+	if (n < start)
+		ft_bzero(dst, n);
 	return (ret);
 }
